@@ -4,7 +4,7 @@ import google.generativeai as genai
 MODEL_NAME = "models/gemini-1.5-flash"
 with open("system_instruction.txt", 'r') as file:
     SYSTEM_INSTRUCTION=file.read()
-sample_prompts = ["Who is Alain?", "What are Alain's skills?", "Tell me about Alain's projects?", "Tell me about Alain's industry experience?"]
+sample_prompts = ["Who is Alain?", "What are Alain's skills?", "Tell me about Alain's projects.", "Tell me about Alain's industry experience."]
 
 st.title("Jim, The Virtual Assistant")
 
