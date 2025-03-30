@@ -1,0 +1,4 @@
+name: "Probe Deployed App"
+runs:
+  using: "docker"
+  image: "Dockerfile"

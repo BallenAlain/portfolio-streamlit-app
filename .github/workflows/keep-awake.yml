@@ -1,0 +1,24 @@
+# from https://github.com/JeanMILPIED/reparatorAI/tree/main/probe-action
+
+name: Keep alive streamlit
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-and-probe:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker Image
+        run: docker build -t my-probe-image -f probe-action/Dockerfile .
+
+      - name: Run Docker Container
+        run: docker run --rm my-probe-image
