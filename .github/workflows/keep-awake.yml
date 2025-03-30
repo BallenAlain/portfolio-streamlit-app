@@ -1,8 +1,9 @@
 # from https://github.com/JeanMILPIED/reparatorAI/tree/main/probe-action
 
-name: Keep alive streamlit
+name: Keep Streamlit app awake with a CRON schedule
 on:
   schedule:
+    # runs at minute 0 every 12 hours
     - cron: '0 */12 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
