@@ -3,8 +3,9 @@
 name: Keep Streamlit app awake with a CRON schedule
 on:
   schedule:
-    # runs at 12am and 12pm EST
-    - cron: '0 5/17 * * *'
+    # runs at 1am and 1pm EST
+    # run at hour 5 UTC every 12 hours
+    - cron: '0 5/12 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
